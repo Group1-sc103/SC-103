@@ -1,0 +1,24 @@
+Ctable and alter commands: 
+==
+Products Table: 
+======
+CREATE DATABASE test;
+USE test;
+SHOW DATABASES;
+CREATE TABLE products(pid integer PRIMARY KEY, pname char(10), pdesc CHAR(20), pprice double, pstatus CHAR(20));
+SELECT * FROM products;
+
+Table Categories:
+
+USE test;
+CREATE TABLE categories(cid integer PRIMARY KEY, name varchar(10), cdesc varchar(10));
+To add values: 
+
+INSERT INTO catagories (cid,cname,cdesc) VALUES (1,'cosmetic','facelotion');
+
+
+Table product_categories:
+====
+USE test;
+CREATE TABLE product_categories(pid int, cid int, PRIMARY KEY(pid,cid), FOREIGN KEY(pid) REFERENCES products(pid) on delete cascade, FOREIGN KEY(cid) REFERENCES categories(cid) on delete cascade);
+
