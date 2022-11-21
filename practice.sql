@@ -4,7 +4,7 @@ CREATE TABLE Users (uid integer PRIMARY KEY, usr_role varchar(10), usr_name varc
 SELECT * FROM PRACTICE.Users;
 INSERT INTO USERS (uid,usr_role,usr_name,usr_email,usr_passwd) VALUES (1, 'customer', 'raja', 'raja@yahoo.com', '12345');
 INSERT INTO USERS (uid,usr_role,usr_name,usr_email,usr_passwd) VALUES (2, 'customer', 'teddy', 'teddy@yahoo.com', '678910');
-#DROP TABLE Users;
+#DROP TABLE Users;product_categories
 #DROP DATABASE PRACTICE;
 #CREATE PRODUCTS TABLE
 CREATE TABLE PRODUCTS (pid integer PRIMARY KEY, pr_name varchar(10), p_des varchar(20), pr_price float(10), pr_status enum('Yes', 'No'));
